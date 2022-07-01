@@ -43,11 +43,12 @@ f = function() {
     console.log("!!!");
 }
 
-
-// var jQuery = function() {......}
-// var $ = jQuery;
-// $.ajax({
-//   url: "",
-//   type: "post",
-//   data: toQueryString(params)
-// });
+/*
+var jQuery = function() {......}
+var $ = jQuery;
+$.ajax({
+    url: "",
+    type: "post",
+    data: toQueryString(params)
+});
+*/
