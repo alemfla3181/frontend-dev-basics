@@ -3,6 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.addEventListener("load", function(){
+	var imgElement = document.createElement("img");
+	
+	// (표준 Attribute[prop(o)], 비표준 attribute[prop(x)] 읽기/쓰기를 위해
+	// getAttribute/setAttribute 를 사용한다.
+	imgElement.setAttribute("src",  "https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&simg=20210408151642033529ecba8d8b8617764132.jpg");
+	imgElement.setAttribute("style", "width: 800px");
+	imgElement.setAttribute("alt", 'city!');
+	imgElement.setAttribute("no1", 10);		// 비표준 속성은 사용할 때 prefix 'data-'를 달아준다.
+	
+	imgElement['name'] = 10;	// 비표준 속성은 사용할 때 prefix 'data-'를 달아준다.
+	imgElement['title'] = "citttttttttttttyyyyyyyy~~";
+		
+	setTimeout(function(){
+		document.body.appendChild(imgElement);
+		console.log(imgElement.alt, imgElement.no1);
+		console.log(imgElement.getAttribute("no2"), imgElement.getAttribute("title"));
+		
+	}, 2000);
+});
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
