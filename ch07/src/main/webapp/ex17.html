@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,6 +7,10 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		$("#p1").text("1.안녕하세요");
+		$("#p2").text("2.<strong>안녕하세요</strong>");
+		console.log($("#p3").text());
+		console.log($("#p4").text());
 	}, 1000);
 });
 </script>
@@ -21,7 +26,7 @@ $(function(){
 		HTML의 escape 문자들
 		& -> &amp;
 		space -> &nbsp;
-		< -> &lth;
+		< -> &lt;
 		> -> &gt;
 		' -> &quot;
 	-->
