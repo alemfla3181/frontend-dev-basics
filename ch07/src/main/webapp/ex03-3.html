@@ -17,7 +17,15 @@ $(function() {
 		console.log("clicked:" + this);
 		
 		// 만약, 핸들러 안에서 이벤트 대상이 되는 this(HTMLElement)의 CSS나 DOM 조작을 해야 하는 경우,
-		this.style.color = "blue";
+		// 다시 jQuery($)의 파라미터로 전달해서 jQuery Object Wrapping 한다.
+		// this.style.color = "blue";
+		$(this).css("color", "blue");
+		
+		// jQuery Object의 거의 모든 API 함수(traverse api 제외)는 호출한 jQuery Object를 다시 반환한다.
+		// 따라서 함수 체인(chain)이 가능하다.
+		$(this)
+			.css("text-decoration", "underline")
+			.text("클릭!!!");
 	});
 });
 </script>
@@ -31,3 +39,4 @@ $(function() {
 	<p>문장4</p>
 </body>
 </html>
+ 
