@@ -9,17 +9,22 @@
 <title>Insert title here</title>
 <script src="${pageContext.request.contextPath}/jquery/jquery-3.6.0.js"></script>
 <script>
-$(function(){
-	$("button").click(function(){
-		$("p").load("${pageContext.request.contextPath}/api/text");
-	});
+// DOM Load Event
+// 1. load: 모두 다(DOM, CSSOM, img)
+// 2. DOMContentLoaded: DOM만 로딩(CSSOM x, img x)
+window.addEventListener("DOMContentLoaded", function(){
+	document
+		.getElementById("data")
+		.addEventListener("click", function(){
+			var xhr = null;
+		})
 });
 </script>
 </head>
 <body>
-	<h1>AJAX test: text format Data</h1>
+	<h1>AJAX test:JSON format Data $.ajax() 함수 사용하기</h1>
 	
-	<button>변경</button>
-	<p>변경전</p>
+	<button>데이터 가져오기</button>
+	<div id="data"></div>
 </body>	
 </html>

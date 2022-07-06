@@ -11,7 +11,7 @@
 <script>
 $(function(){
 	$("button").click(function(){
-		$("p").load("${pageContext.request.contextPath}/api/text");
+		$("p").load('${pageContext.request.contextPath}/api/html p');
 	});
 });
 </script>
