@@ -59,6 +59,25 @@ $(function(){
 			}			
 		});
 	});
+	
+	$("#delete").click(function(){			
+		var vo ={
+			name: "둘리",
+			password: "12345",
+			gender: "female"
+		}
+		
+		$.ajax({
+			url: "${pageContext.request.contextPath}/api/user/10",
+			type: "delete",
+			dataType: "json",
+			contentType: "application/x-www-form-urlencoded",
+			data: "password=1234", 
+			success: function(response){
+				console.log(response);
+			}			
+		});
+	});
 
 });
 </script>
