@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="${pageContext.request.contextPath }/jquery/jquery-3.6.0.js"></script>
 <script>
-var render = function(vo) {
+var render = function(vo, mode) {
 	var htmls = 
 		"<li data-no=''>" +
 		"<strong>" + vo.name + "</strong>" +
@@ -45,7 +45,7 @@ $(function(){
 					console.error(response.message);
 					return;
 				}
-				render(response.data);
+				render(response.data, true);
 			}
 		});
 		
